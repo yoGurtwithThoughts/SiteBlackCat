@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Arsenal';
+    src: url(../fonts/Arsenal-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Стиль для градиентного текста (заголовка) */
+.gradient-texts {
+    position: absolute; 
+    top: 3%; /* Расположение сверху */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Точный центр по горизонтали */
+    font-size: 64px; /* Размер шрифта */
+    font-family: 'Bellota'; /* Шрифт заголовка */
+    font-weight: bold;
+    text-align: center; /* Выравнивание текста по центру */
+    color: #fff; /* Цвет текста */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Добавляем тень для глубины */
+}
+
+/* Стиль для карточки товара */
+.card-slider {
+    width: 250px; /* Уменьшаем ширину карточки */
+    height: 300px; /* Уменьшаем высоту карточки */
+    background-color: #533529; /* Цвет фона */
+    border-radius: 15px; /* Скругленные углы */
+    overflow: hidden; /* Скрываем содержимое за пределами карточки */
+    position: relative;
+    margin: 0 5px; /* Маленький отступ между карточками */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+
+.card-slider:hover::before {
+    background-color: rgba(0, 0, 0, 0.5); /* Тёмный полупрозрачный фон при наведении */
+}
+
+/* Изображение внутри карточки */
+.card img {
+    width: 100%; /* Занимает всю ширину карточки */
+    height: 70%; /* Высота изображения */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+}
+
+.card-title-line {
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(254, 254, 254, 0.4); 
+    z-index: 0;
+}
+/* Название товара */
+.card-title {
+    position: absolute;
+    bottom: 10px; /* Располагаем над линией */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Arsenal'; /* Используем заданный шрифт */
+    color: white;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+/* Иконка корзины */
+.cart-icon {
+    position: absolute;
+    bottom: 50px; /* Располагаем выше названия */
+    right: 10px;
+    color: white;
+    font-size: 1.5rem; /* Размер иконки */
+    z-index: 2;
+    cursor: pointer; /* Добавляем курсор указателя */
+    background-image: url('../images/card-icon/cart.svg'); /* Путь к иконке */
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border: none;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #333; /* Цвет активного индикатора */
+}
+
+.carousel-indicators button:hover {
+    background-color: #555; /* Цвет при наведении */
+}
+
+/* Стиль для иконок внутри кнопок */
+.custom-icon {
+    width: 100%; /* Занимает всю ширину кнопки */
+    height: 100%; /* Занимает всю высоту кнопки */
+    background-size: contain; /* Масштабируем иконку под размер кнопки */
+    background-repeat: no-repeat; /* Без повтора */
+    background-position: center; /* Центрируем иконку */
+    transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+}
+.custom-carousel-btn {
+    background: none; /* Убираем фон у кнопки */
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Фиксированный размер кнопки */
+    height: 50px;
+}
+
+.custom-carousel-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Сохранение пропорций */
+}
+.custom-carousel-btn.inactive img {
+    opacity: 0.3; /* Делаем кнопку блеклой */
+    pointer-events: none; /* Отключаем клик */
+}
+.btnprod-custom {
+    background-image: radial-gradient(circle, #E0A872, #E0A872);
+    color: #fcecd0;
+    border-radius: 50px;
+    font-size: 25px;
+    height: 60px;
+    width: 340px;
+    font-family: 'Bellota';
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.btnprod-custom::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(84, 55, 43, 0.4);
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.btnprod-custom:hover {
+    background-color: rgba(84, 55, 43, 0.9);
+    transform: scale(1.05);
+}
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    /* Дополнительные стили для карусели */
+}
+
+.carousel-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.custom-carousel-btn {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.custom-carousel-btn img {
+    width: 30px; /* Регулируйте размер иконок по вашему усмотрению */
+}

@@ -1,0 +1,112 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Шрифты */
+@font-face {
+    font-family: 'dansing-script';
+    src: url('fonts/DancingScript.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bellota';
+    src: url(../fonts/Bellota-Regular.ttf) format("truetype");
+}
+
+.container-fluid {
+    display: flex;
+    height: 100vh;
+}
+
+.image-title img {
+    display: table-cell;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-height: 600px;
+    width: 550px;
+    height: 800px;
+    background-size: cover;
+
+}
+
+.left-section {
+    color: #f5e6c8;
+    flex: 0 0 800px;
+    /* Устанавливаем фиксированную ширину 400px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-section {
+    background-color: #7C573C;
+    display: flex;
+    flex: 0 0 300px;
+    justify-content: right;
+    align-items: flex-end;
+    position: relative;
+    height: 100%;
+    padding-right: 0;
+    z-index: -1;
+}
+
+
+.subtitle {
+    font-size: 35px;
+    font-family: 'Bellota';
+    color: #DABB9E;
+    margin-top: 10px;
+}
+
+.btn-custom {
+    background-image: radial-gradient(circle, #E0A872, #E0A872);
+    color: #fcecd0;
+    border-radius: 50px;
+    font-size: 25px;
+    height: 60px;
+    width: 340px;
+    font-family: 'Bellota';
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.btn-custom::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(84, 55, 43, 0.4);
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.btn-custom:hover {
+    background-color: rgba(84, 55, 43, 0.9);
+    transform: scale(1.05);
+}
+
+.imgright img {
+    flex: end;
+    width: auto;
+    height: 100%;
+    max-width: 80%;
+}
+
+.custom-container {
+    width: 100%;
+    z-index: -1;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}

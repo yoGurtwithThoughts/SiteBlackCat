@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'dansing-script';
+    src: url(../fonts/DancingScript-VariableFont_wght.ttf) format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bellota';
+    src: url(../fonts/Bellota-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+body {
+    margin: 0;
+    background-image: url('../images/PatternBack.svg'); /* Убедитесь, что путь к изображению правильный */
+    background-repeat: no-repeat; /* Исправлено: добавлено пробел между свойствами */
+    background-size: cover; /* Добавлено: изображение будет масштабироваться, чтобы покрыть весь экран */
+    background-position: center; /* Добавлено: центрируем изображение */
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; /* Убедитесь, что позиционирование установлено */
+    z-index: -2; /* Убедитесь, что z-index не мешает другим элементам */
+}
+.app-bar-castom {
+    height: 8%;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1;
+    transition: top 0.3s ease;
+    color: #F7E1BC !important; /* Цвет текста в навигации */
+}
+
+.glow {
+    position: fixed;
+    height: 300px;
+    width: 300px;
+    background: url(../images/Glow2.png) no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.img-logo {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    z-index: 1;
+}
+
+.button-container {
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.btn-link {
+    background: transparent; 
+    border: none; /* Убираем границу */
+    text-align: center; 
+    color: #F7E1BC; /* Цвет текста кнопки */
+    font-family: 'Bellota'; 
+    font-size: 25px; 
+    text-decoration: none !important; 
+    transition: color 0.3s ease, transform 0.2s ease !important; 
+    overflow: hidden; 
+    cursor: pointer; 
+    margin-right: 20px; 
+}
+
+/* Переопределяем цвет для ссылок */
+.btn-link:hover, .btn-link:focus {
+    color: #F7E1BC; /* Цвет текста при наведении */
+}
+
+.btn-link:active {
+    color: #F7E1BC !important; 
+    transform: scale(0.95);
+    transition: transform 0.1s ease-in !important; 
+}
+
+
+a {
+   color: #F7E1BC !important; /* Устанавливаем желаемый цвет текста для всех ссылок */
+   outline: none !important; 
+}
+
+a:hover {
+   color: #F7E1BC !important; /* Цвет при наведении на ссылки */
+}

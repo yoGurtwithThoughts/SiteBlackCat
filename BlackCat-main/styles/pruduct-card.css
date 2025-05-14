@@ -1,0 +1,116 @@
+.all-container {
+    background-image: url('../images/Coffee beans.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #54372B;
+    opacity: 0.9;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    height: 500px;
+    width: 350px;
+    margin: 20px; /* Add margin for spacing */
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-text {
+    color: #FFFFFF;
+    font-family: 'Arsenal';
+    font-size: 20px;
+}
+
+.cart-footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-icon {
+    height: 20px;
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.2);
+    color: #e0c7a3;
+}
+
+.pagination-nav {
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    margin-top: 20px; /* Top margin */
+}
+
+.page-link {
+    background-color: #5c3d2e;
+    color: #f5e6d3;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #e0c7a3;
+    color: #2c1d1d;
+}
+
+@font-face {
+    font-family: 'Bellota';
+    src: url(../fonts/Bellota-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Arsenal';
+    src: url(../fonts/Arsenal-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+.indicator-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    border: none;
+    background-color: #6c4f3d; /* неактивная */
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.indicator-dot.active {
+    background-color: #f1e2c1; /* активная точка */
+    opacity: 1;
+    transform: scale(1.2);
+}
