@@ -16,63 +16,66 @@ html {
 .container-fluid {
     display: flex;
     height: 100vh;
+    flex-wrap: wrap;
 }
 
+/* Левая картинка */
 .image-title img {
-    display: table-cell;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-height: 600px;
-    width: 550px;
-    height: 800px;
-    background-size: cover;
-
+    display: block;
+    margin: 0 auto;
+    max-height: 70vh;
+    width: auto;
+    max-width: 90vw;
+    object-fit: cover;
 }
 
+/* Левая секция */
 .left-section {
     color: #f5e6c8;
-    flex: 0 0 800px;
-    /* Устанавливаем фиксированную ширину 400px */
+    flex: 1 1 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 4vh 3vw;
 }
 
+/* Правая секция с картинкой */
 .right-section {
-    background-color: #7C573C;
+    flex: 1 1 40%;
     display: flex;
-    flex: 0 0 300px;
-    justify-content: right;
-    align-items: flex-end;
-    position: relative;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 10vh;
+    padding-right: 3vw;
     height: 100%;
-    padding-right: 0;
+    position: relative;
     z-index: -1;
 }
 
-
+/* Заголовок */
 .subtitle {
-    font-size: 35px;
+    font-size: clamp(18px, 2.5vw, 35px);
     font-family: 'Bellota';
     color: #DABB9E;
-    margin-top: 10px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
+/* Кнопка */
 .btn-custom {
     background-image: radial-gradient(circle, #E0A872, #E0A872);
     color: #fcecd0;
     border-radius: 50px;
-    font-size: 25px;
-    height: 60px;
-    width: 340px;
+    font-size: clamp(16px, 2vw, 25px);
+    height: clamp(40px, 6vh, 60px);
+    width: clamp(200px, 40vw, 340px);
     font-family: 'Bellota';
     border: none;
     cursor: pointer;
     position: relative;
-    margin-left: 50px;
+    margin-left: 5vw;
     z-index: 1;
 }
 
@@ -93,20 +96,24 @@ html {
     transform: scale(1.05);
 }
 
-.imgright img {
-    flex: end;
-    width: auto;
-    height: 100%;
-    max-width: 80%;
+.imgright svg {
+   width: clamp(100px, 45vw, 300px); /* адаптивная ширина */
+    height: auto;                    /* сохраняем пропорции */
+    display: block;
 }
 
 .custom-container {
     width: 100%;
-    z-index: -1;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
     display: flex;
-    align-items: center;
-    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15vh; /* Отступ сверху, чтобы не налезала */
+    margin-top: 5vh;   /* Дополнительный внешний отступ сверху */
+}
+
+.centered-big-image {
+    width: 90%;
+    max-width: 1600px;
+    height: auto;
+    display: block;
 }

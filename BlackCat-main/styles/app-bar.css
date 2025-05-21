@@ -10,36 +10,40 @@
     font-style: normal;
     font-weight: normal;
 }
+
 body {
     margin: 0;
-    background-image: url('../images/PatternBack.svg'); /* Убедитесь, что путь к изображению правильный */
-    background-repeat: no-repeat; /* Исправлено: добавлено пробел между свойствами */
-    background-size: cover; /* Добавлено: изображение будет масштабироваться, чтобы покрыть весь экран */
-    background-position: center; /* Добавлено: центрируем изображение */
+    background-image: url('../images/PatternBack.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
-    position: relative; /* Убедитесь, что позиционирование установлено */
-    z-index: -2; /* Убедитесь, что z-index не мешает другим элементам */
+    position: relative;
+    z-index: -2;
+    font-size: 1.2vw; /* Адаптивный базовый размер шрифта */
 }
+
 .app-bar-castom {
-    height: 8%;
+    height: 8vh; /* Высота панели — 8% от высоты окна */
+    width: 100%;
     display: flex;
     position: fixed;
-    top: 20px;
+    top: 2vh;
     left: 0;
     right: 0;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 2%;
     z-index: 1;
     transition: top 0.3s ease;
-    color: #F7E1BC !important; /* Цвет текста в навигации */
+    color: #F7E1BC !important;
 }
 
 .glow {
     position: fixed;
-    height: 300px;
-    width: 300px;
+    height: 20vh;  /* 20% от высоты экрана */
+    width: 20vh;   /* квадратная область */
     background: url(../images/Glow2.png) no-repeat center center;
     background-size: cover;
     z-index: 1;
@@ -47,50 +51,49 @@ body {
 
 .img-logo {
     position: relative;
-    height: 60px;
-    width: 60px;
+    height: 6vh;
+    width: 6vh;
     z-index: 1;
 }
 
 .button-container {
     height: auto;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 2vh;
     justify-content: flex-end;
     display: flex;
 }
 
 .btn-link {
-    background: transparent; 
-    border: none; /* Убираем границу */
-    text-align: center; 
-    color: #F7E1BC; /* Цвет текста кнопки */
-    font-family: 'Bellota'; 
-    font-size: 25px; 
-    text-decoration: none !important; 
-    transition: color 0.3s ease, transform 0.2s ease !important; 
-    overflow: hidden; 
-    cursor: pointer; 
-    margin-right: 20px; 
+    background: transparent;
+    border: none;
+    text-align: center;
+    color: #F7E1BC;
+    font-family: 'Bellota';
+    font-size: 2vw;
+    text-decoration: none !important;
+    transition: color 0.3s ease, transform 0.2s ease !important;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 2vw;
 }
 
-/* Переопределяем цвет для ссылок */
-.btn-link:hover, .btn-link:focus {
-    color: #F7E1BC; /* Цвет текста при наведении */
+.btn-link:hover,
+.btn-link:focus {
+    color: #F7E1BC;
 }
 
 .btn-link:active {
-    color: #F7E1BC !important; 
+    color: #F7E1BC !important;
     transform: scale(0.95);
-    transition: transform 0.1s ease-in !important; 
+    transition: transform 0.1s ease-in !important;
 }
 
-
 a {
-   color: #F7E1BC !important; /* Устанавливаем желаемый цвет текста для всех ссылок */
-   outline: none !important; 
+    color: #F7E1BC !important;
+    outline: none !important;
 }
 
 a:hover {
-   color: #F7E1BC !important; /* Цвет при наведении на ссылки */
+    color: #F7E1BC !important;
 }

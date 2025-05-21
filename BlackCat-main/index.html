@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-< class="html">
+<div class="html">
 
     <head>
         <meta charset="UTF-8">
@@ -52,275 +52,266 @@
                 </button>
             </div>
         </app-bar>
-        </div>
+</div>
 
 
-        <div class="container-fluid d-flex">
-            <div class="row w-100 align-items-center justify-content-center no-gutters">
-                <div class="col-md-7 text-light d-flex flex-column align-items-center justify-content-center">
-                    <div class="d-flex flex-column align-items-center h-50">
-                        <div class="image-title mb-6 d-flex justify-content-center align-items-center flex-wrap">
-                            <img alt="Black Cat " src="images/Blackcat.png" class="image-title"
-                                style="max-height: 300px;" />
+<div class="container-fluid d-flex">
+    <div class="row w-100 align-items-center justify-content-center no-gutters">
+        <div class="col-md-7 text-light d-flex flex-column align-items-center justify-content-center">
+            <div class="d-flex flex-column align-items-center h-50">
+                <div class="image-title mb-6 d-flex justify-content-center align-items-center flex-wrap">
+                    <img alt="Black Cat " src="images/Black cat.svg" class="image-title" style="max-height: 300px;" />
 
-                            <p class="subtitle mb-2 text-center align-items-strart">В каждом глотке — уют и вдохновение!
-                            </p>
-                            <div class="d-flex justify-content-center mb-2">
-                                <button class="btn btn-custom mr-2">Купить</button>
-                                <button class="btn btn-custom">Забронировать</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 right-section d-flex justify-content-end align-items-end p-0">
-                    <img class="imgright" src="images/rihgt.png" style="width: auto; height: 950px;" />
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid custom-container">
-            <div class="row justify-content-center align-items-center h-100">
-                <div class="col text-center">
-                    <img src="images/History.svg" class="img-fluid" alt="description">
-                </div>
-
-            </div>
-        </div>
-        <div class="container-fluid justify-content-center align-items-center h-60
-      align-content-center ">
-            <div class="row justify-content-center align-items-center h-100 align-content-center">
-                <div class="col text-center">
-                    <img src="images/SaleBanner.png" class="img-fluid" alt="description">
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid background-container mt-5 d-flex flex-column align-items-center">
-            <div class="row w-100">
-                <div class="col-md-6 image-cell position-relative">
-                    <div class="title-images">
-                        <img src="images/Reserve Img.png" alt="Coffe cup" class="img-fluid" />
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <form class="w-100"> <!-- Добавляем класс w-100 для формы -->
-                        <div class="form-field">
-                            <img class="icon-form" src="images/calendar.svg" alt="иконка">
-                            <input type="text" id="data" class="form-control" placeholder="Дата"
-                                onfocus="changePlaceholder(this, 'ДД.ММ.ГГГГ')" onblur="resetPlaceholder(this, 'Дата')">
-                        </div>
-                        <div class="form-field">
-                            <img class="icon-form" src="images/clock.svg" alt="иконка">
-                            <input type="text" id="time" class="form-control" placeholder="Время"
-                                onfocus="changePlaceholder(this, 'ЧЧ:ММ')" onblur="resetPlaceholder(this, 'Время')">
-                        </div>
-                        <div class="form-field">
-                            <img class="icon-form" src="images/person.svg" alt="иконка">
-                            <input type="text" id="name" class="form-control" placeholder="Ваше имя"
-                                onfocus="changePlaceholder(this, 'Иван Иванов')"
-                                onblur="resetPlaceholder(this, 'Ваше имя')">
-                        </div>
-                        <div class="form-field">
-                            <img class="icon-form" src="images/phone.svg" alt="иконка">
-                            <input type="tel" id="phone" class="form-control" placeholder="Ваш номер телефона"
-                                onfocus="changePlaceholder(this, '+7 (999) 999-99-99')"
-                                onblur="resetPlaceholder(this, 'Ваш номер телефона')">
-                        </div>
-                        <div class="form-field">
-                            <img class="icon-form" src="images/mail.svg" alt="иконка">
-                            <input type="email" id="email" class="form-control" placeholder="Ваша почта"
-                                onfocus="changePlaceholder(this, 'example@gmail.com')"
-                                onblur="resetPlaceholder(this, 'Ваша почта')">
-                        </div>
-                        <!-- Кнопка "Забронировать" -->
-                        <div class="mt-5 text-end">
-                            <button type="submit" class="btn-custom">Забронировать</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <h1 class="gradient-text">
-                <span class="first-word">Забронировать</span>
-                <span class="second-word">столик</span>
-            </h1>
-        </div>
-        <div class="container text-center">
-            <!-- Заголовок -->
-            <div class="row">
-                <div class="col">
-                    <h1 class="gradient-texts">
-                        <span class="first-word">Наше</span>
-                        <span class="second-word">меню</span>
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Кнопки категории -->
-        <div class="container text-center mt-3">
-            <div class="row mt-3">
-                <div class="col mt-5">
-                    <div class="spacer my-5"></div>
-                    <button class="btnprod btn-sm btn-custom me-2" onclick="filterCategory('coffee')">Кофе</button>
-                    <button class="btnprod btn-sm btn-custom ms-2" onclick="filterCategory('desserts')">Десерты</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Карусель -->
-        <div class="container d-flex align-items-center justify-content-center vh-100">
-            <div class="row h-75 overflow-hidden">
-                <div class="col">
-                    <div id="coffeeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                        <div class="carousel-inner">
-                            <!-- Слайд 1 -->
-                            <div class="carousel-item coffee">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                        <div class="card-slider">
-                                            <img src="images/card-images/Raf.png" alt="Раф"
-                                                class="img-fluid rounded-top">
-                                            <div class="card-body text-center">
-                                                <div class="card-title-line"></div>
-                                                <i class="fas fa-shopping-cart cart-icon"></i>
-                                                <h5 class="card-title">Раф 248 руб</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                        <div class="card-slider">
-                                            <img src="images/card-images/Latte.png" alt="Латте"
-                                                class="img-fluid rounded-top">
-                                            <div class="card-body text-center">
-                                                <div class="card-title-line"></div>
-                                                <i class="fas fa-shopping-cart cart-icon"></i>
-                                                <h5 class="card-title">Латте 200 руб</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                        <div class="card-slider">
-                                            <img src="images/card-images/Capuchino.png" alt="Капучино"
-                                                class="img-fluid rounded-top">
-                                            <div class="card-body text-center">
-                                                <div class="card-title-line"></div>
-                                                <i class="fas fa-shopping-cart cart-icon"></i>
-                                                <h5 class="card-title">Капучино 225 руб</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Стрелка-заглушка внизу карточек -->
-                                <div class="container text-center mt-3">
-                                    <div class="row mt-3">
-                                        <div class="col mt-5">
-                                            <img class="img" src="../BlackCat-main/images/Arrows.png" height="50px"
-                                                width="auto" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Десерты -->
-                            <div class="carousel-item desserts">
-                                <div class="row justify-content-center g-4"> <!-- Увеличенные отступы -->
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                        <div class="card-slider">
-                                            <img src="images/card-images/PanCake.png" class="img-fluid rounded-top">
-                                            <div class="card-body text-center">
-                                                <div class="card-title-line"></div>
-                                                <i class="fas fa-shopping-cart cart-icon"></i>
-                                                <h5 class="card-title">Панкейки 350 руб</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                        <div class="card-slider">
-                                            <img src="images/card-images/Tiramicco.png" class="img-fluid rounded-top">
-                                            <div class="card-body text-center">
-                                                <div class="card-title-line"></div>
-                                                <i class="fas fa-shopping-cart cart-icon"></i>
-                                                <h5 class="card-title">Тирамису 150 руб</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                        <div class="card-slider">
-                                            <img src="images/card-images/Croissant.png" class="img-fluid rounded-top">
-                                            <div class="card-body text-center">
-                                                <div class="card-title-line"></div>
-                                                <i class="fas fa-shopping-cart cart-icon"></i>
-                                                <h5 class="card-title">Круассан 180 руб</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Стрелка-заглушка внизу карточек -->
-                                <div class="container text-center mt-3">
-                                    <div class="row mt-3">
-                                        <div class="col mt-5">
-                                            <img class="img" src="../BlackCat-main/images/Arrows.png" height="50px"
-                                                width="auto" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <p class="subtitle mb-2 text-center align-items-strart">В каждом глотке — уют и вдохновение!
+                    </p>
+                    <div class="d-flex justify-content-center mb-2">
+                        <button class="btn btn-custom mr-2">Купить</button>
+                        <button class="btn btn-custom">Забронировать</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Заголовок "Наш блог" ПЕРЕМЕЩЁН СЮДА -->
-        <div class="container text-center mt-7">
-            <div class="row">
-                <div class="col">
-                    <h1 class="gradient-texts">
-                        <span class="first-word">Наш</span>
-                        <span class="second-word">блог</span>
-                    </h1>
-                </div>
-            </div>
+        <div class="col-md-5 right-section d-flex justify-content-end align-items-end p-0">
+            <img class="imgright" src="images/right.svg" />
         </div>
-        <div
-            class="container-fluid background-containerblog mt-5 d-flex flex-column align-items-center position-relative overflow-hidden">
-
-            <!-- Вьюпорт: отступ сверху для опускания картинок -->
-            <div id="carouselViewport" class="w-100 overflow-hidden mt-5" style="max-width: 90vw;">
-                <div id="carouselTrack" class="d-flex transition-transform" style="transform: translateX(0);">
-                    <img src="../BlackCat-main/images/Blog4.svg" class="img-fluid me-3 flex-shrink-0"
-                        style="width: 28vw;" />
-                    <img src="../BlackCat-main/images/blog3.svg" class="img-fluid me-3 flex-shrink-0"
-                        style="width: 28vw;" />
-                    <img src="../BlackCat-main/images/blog2.svg" class="img-fluid me-3 flex-shrink-0"
-                        style="width: 28vw;" />
-                    <img src="../BlackCat-main/images/blog1.svg" class="img-fluid me-3 flex-shrink-0"
-                        style="width: 28vw;" />
-                </div>
-            </div>
-
-            <!-- Кнопка вправо: остаётся внизу -->
-            <div class="position-absolute" style="right: 20px; bottom: 10px;">
-                <button onclick="scrollRight()" class="btn p-0 border-0 bg-transparent">
-                    <img src="../BlackCat-main/images/list.svg" style="height: 30px;" alt="Right Arrow" />
-                </button>
-            </div>
-        </div>
-   <div class="container text-center mt-1">
-  <div class="row mt-3 justify-content-center">
-    <div class="col-auto mt-3 d-flex justify-content-center">
-      <img class="img mx-auto d-block" src="../BlackCat-main/images/reviewimg.svg" style="max-width: 120%; height: 120%;" />
+    </div>
+</div>
+<div class="container-fluid custom-container mt-5 pt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 d-flex justify-content-center">
+      <img src="images/History.svg" class="img-fluid centered-big-image" alt="History">
     </div>
   </div>
 </div>
+<div class="container-fluid justify-content-center align-items-center h-60
+      align-content-center ">
+    <div class="row justify-content-center align-items-center h-100 align-content-center">
+        <div class="col text-center">
+            <img src="images/SaleBanner.png" class="img-fluid" alt="description">
+        </div>
+    </div>
+</div>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <script src="script/inputhint.js"></script>
-        <script src="script/active-inactive-button.js"></script>
-        <script src="script/flter.js"></script>
-    </body>
+<div class="container-fluid background-container mt-5 d-flex flex-column align-items-center">
+    <div class="row w-100">
+        <div class="col-md-6 image-cell position-relative">
+            <div class="title-images">
+                <img src="images/Reserve Img.png" alt="Coffe cup" class="img-fluid" />
+            </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <form class="w-100"> <!-- Добавляем класс w-100 для формы -->
+                <div class="form-field">
+                    <img class="icon-form" src="images/calendar.svg" alt="иконка">
+                    <input type="text" id="data" class="form-control" placeholder="Дата"
+                        onfocus="changePlaceholder(this, 'ДД.ММ.ГГГГ')" onblur="resetPlaceholder(this, 'Дата')">
+                </div>
+                <div class="form-field">
+                    <img class="icon-form" src="images/clock.svg" alt="иконка">
+                    <input type="text" id="time" class="form-control" placeholder="Время"
+                        onfocus="changePlaceholder(this, 'ЧЧ:ММ')" onblur="resetPlaceholder(this, 'Время')">
+                </div>
+                <div class="form-field">
+                    <img class="icon-form" src="images/person.svg" alt="иконка">
+                    <input type="text" id="name" class="form-control" placeholder="Ваше имя"
+                        onfocus="changePlaceholder(this, 'Иван Иванов')" onblur="resetPlaceholder(this, 'Ваше имя')">
+                </div>
+                <div class="form-field">
+                    <img class="icon-form" src="images/phone.svg" alt="иконка">
+                    <input type="tel" id="phone" class="form-control" placeholder="Ваш номер телефона"
+                        onfocus="changePlaceholder(this, '+7 (999) 999-99-99')"
+                        onblur="resetPlaceholder(this, 'Ваш номер телефона')">
+                </div>
+                <div class="form-field">
+                    <img class="icon-form" src="images/mail.svg" alt="иконка">
+                    <input type="email" id="email" class="form-control" placeholder="Ваша почта"
+                        onfocus="changePlaceholder(this, 'example@gmail.com')"
+                        onblur="resetPlaceholder(this, 'Ваша почта')">
+                </div>
+                <!-- Кнопка "Забронировать" -->
+                <div class="mt-5 text-end">
+                    <button type="submit" class="btn-custom">Забронировать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <h1 class="gradient-text">
+        <span class="first-word">Забронировать</span>
+        <span class="second-word">столик</span>
+    </h1>
+</div>
+<div class="container text-center">
+    <!-- Заголовок -->
+    <div class="row">
+        <div class="col">
+            <h1 class="gradient-texts">
+                <span class="first-word">Наше</span>
+                <span class="second-word">меню</span>
+            </h1>
+        </div>
+    </div>
+</div>
 
-    </html>
+
+<!-- Кнопки категории -->
+<div class="container text-center mt-3">
+    <div class="row mt-3">
+        <div class="col mt-5">
+            <div class="spacer my-5"></div>
+            <button class="btnprod btn-sm btn-custom me-2" onclick="filterCategory('coffee')">Кофе</button>
+            <button class="btnprod btn-sm btn-custom ms-2" onclick="filterCategory('desserts')">Десерты</button>
+        </div>
+    </div>
+</div>
+
+<!-- Карусель -->
+<div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="row h-75 overflow-hidden">
+        <div class="col">
+            <div id="coffeeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <!-- Слайд 1 -->
+                    <div class="carousel-item coffee">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <div class="card-slider">
+                                    <img src="images/card-images/Raf.png" alt="Раф" class="img-fluid rounded-top">
+                                    <div class="card-body text-center">
+                                        <div class="card-title-line"></div>
+                                        <i class="fas fa-shopping-cart cart-icon"></i>
+                                        <h5 class="card-title">Раф 248 руб</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <div class="card-slider">
+                                    <img src="images/card-images/Latte.png" alt="Латте" class="img-fluid rounded-top">
+                                    <div class="card-body text-center">
+                                        <div class="card-title-line"></div>
+                                        <i class="fas fa-shopping-cart cart-icon"></i>
+                                        <h5 class="card-title">Латте 200 руб</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <div class="card-slider">
+                                    <img src="images/card-images/Capuchino.png" alt="Капучино"
+                                        class="img-fluid rounded-top">
+                                    <div class="card-body text-center">
+                                        <div class="card-title-line"></div>
+                                        <i class="fas fa-shopping-cart cart-icon"></i>
+                                        <h5 class="card-title">Капучино 225 руб</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Стрелка-заглушка внизу карточек -->
+                        <div class="container text-center mt-3">
+                            <div class="row mt-3">
+                                <div class="col mt-5">
+                                    <img class="img" src="../BlackCat-main/images/Arrows.png" height="50px"
+                                        width="auto" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Десерты -->
+                    <div class="carousel-item desserts">
+                        <div class="row justify-content-center g-4"> <!-- Увеличенные отступы -->
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <div class="card-slider">
+                                    <img src="images/card-images/PanCake.png" class="img-fluid rounded-top">
+                                    <div class="card-body text-center">
+                                        <div class="card-title-line"></div>
+                                        <i class="fas fa-shopping-cart cart-icon"></i>
+                                        <h5 class="card-title">Панкейки 350 руб</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <div class="card-slider">
+                                    <img src="images/card-images/Tiramicco.png" class="img-fluid rounded-top">
+                                    <div class="card-body text-center">
+                                        <div class="card-title-line"></div>
+                                        <i class="fas fa-shopping-cart cart-icon"></i>
+                                        <h5 class="card-title">Тирамису 150 руб</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <div class="card-slider">
+                                    <img src="images/card-images/Croissant.png" class="img-fluid rounded-top">
+                                    <div class="card-body text-center">
+                                        <div class="card-title-line"></div>
+                                        <i class="fas fa-shopping-cart cart-icon"></i>
+                                        <h5 class="card-title">Круассан 180 руб</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Стрелка-заглушка внизу карточек -->
+                        <div class="container text-center mt-3">
+                            <div class="row mt-3">
+                                <div class="col mt-5">
+                                    <img class="img" src="../BlackCat-main/images/Arrows.png" height="50px"
+                                        width="auto" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Заголовок "Наш блог" ПЕРЕМЕЩЁН СЮДА -->
+<div class="container text-center mt-7">
+    <div class="row">
+        <div class="col">
+            <h1 class="gradient-texts">
+                <span class="first-word">Наш</span>
+                <span class="second-word">блог</span>
+            </h1>
+        </div>
+    </div>
+</div>
+<div
+    class="container-fluid background-containerblog mt-5 d-flex flex-column align-items-center position-relative overflow-hidden">
+
+    <!-- Вьюпорт: отступ сверху для опускания картинок -->
+    <div id="carouselViewport" class="w-100 overflow-hidden mt-5" style="max-width: 90vw;">
+        <div id="carouselTrack" class="d-flex transition-transform" style="transform: translateX(0);">
+            <img src="../BlackCat-main/images/Blog4.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
+            <img src="../BlackCat-main/images/blog3.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
+            <img src="../BlackCat-main/images/blog2.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
+            <img src="../BlackCat-main/images/blog1.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
+        </div>
+    </div>
+
+    <!-- Кнопка вправо: остаётся внизу -->
+    <div class="position-absolute" style="right: 20px; bottom: 10px;">
+        <button onclick="scrollRight()" class="btn p-0 border-0 bg-transparent">
+            <img src="../BlackCat-main/images/list.svg" style="height: 30px;" alt="Right Arrow" />
+        </button>
+    </div>
+</div>
+<div class="container text-center mt-1">
+    <div class="row mt-3 justify-content-center">
+        <div class="col-auto mt-3 d-flex justify-content-center">
+            <img class="img mx-auto d-block" src="../BlackCat-main/images/reviewimg.svg"
+                style="max-width: 120%; height: 120%;" />
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="script/inputhint.js"></script>
+<script src="script/active-inactive-button.js"></script>
+<script src="script/flter.js"></script>
+</body>
+
+</html>

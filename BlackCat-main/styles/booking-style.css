@@ -1,104 +1,113 @@
 .background-container {
-  background-image: url('../images/ReserveBack.svg'); /* Укажите путь к вашему фоновому изображению */
-  height: 700px; /* Высота будет зависеть от содержимого */
-  width: 100%; /* Занимает всю ширину родительского контейнера */
-  position: relative; /* Относительное положение */
-  background-size: cover; /* Изображение заполняет контейнер */
-  opacity: 0.75; /* Прозрачность фона */
-  padding: 40px 20px; /* Отступы для фона */
-z-index: -1;
+  background-image: url('../images/ReserveBack.svg');
+  height: 85vh;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+  padding: 5vh 5vw;
+  z-index: -1;
 }
 
 .container {
-  position: relative; /* Устанавливаем относительное положение для контейнера */
-  z-index: 1; /* Устанавливаем z-index выше, чем у фона */
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 3vh 5vw;
 }
+
 .table-container {
   z-index: -1;
-  display: flex; /* Используем flexbox вместо таблицы */
-  flex-direction: row; /* Горизонтальное расположение */
-  justify-content: space-between; /* Расширяем содержимое по длине */
-  align-items: flex-start; /* Выравнивание по верхнему краю */
-  width: 100%; /* Занимает всю ширину */
-  max-width: 1200px; /* Максимальная ширина для больших экранов */
-  margin: 0 auto; /* Центрируем контейнер */
-  padding: 20px; /* Добавляем отступы */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 4vh 3vw;
 }
 
 .image-cell {
-  flex: 2; /* Занимает оставшееся пространство */
-  max-width: 60%; /* Максимальная ширина для изображения */
-  display: flex; /* Используем flex для центрирования */
-  justify-content: center; /* Центрируем изображение */
-  align-items: center; 
+  flex: 2;
+  max-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title-images img {
-  width: 100%; 
-  height: 550px;
-  margin-bottom: 5px;
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+  margin-bottom: 2vh;
 }
 
 .right-columns {
-  flex: 1; 
+  flex: 1;
   z-index: 1;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 3vw;
   display: flex;
-  flex-direction: column; 
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
 }
 
 .form-container {
-  width: 100%; 
-  max-width: 1000px;
+  width: 100%;
+  max-width: 80vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   justify-content: center;
-  margin-left: 45px;
+  margin-left: 4vw;
 }
 
 .form-field {
   z-index: 1;
-  height: 55px;
+  height: 7.5vh;
   background: #FFFF;
-  border-radius: 15px;
-  margin-top: 25px; 
+  border-radius: 2vh;
+  margin-top: 4vh;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 1.5vh 1vw;
   position: relative;
-  width: 100%; 
+  width: 100%;
 }
 
 .form-field input {
   width: 100%;
-  height: 40px;
-  padding: 10px;
-  border: none; 
-  border-radius: 15px; 
-  font-size: 20px;
+  height: 100%;
+  padding: 1.5vh 1vw;
+  border: none;
+  border-radius: 2vh;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   font-family: 'Bellota';
   color: #9D8781;
-  outline: none; 
-  box-shadow: none; 
+  outline: none;
+  box-shadow: none;
   text-align: left;
-  background-color: transparent; 
+  background-color: transparent;
 }
 
 .form-field input:focus {
-  border: none; 
-  outline: none; 
-  box-shadow: none; 
-  background-color: rgba(255, 255, 255, 0.8); 
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.85);
 }
+
 .icon-form {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  margin-left: 10px;
+  width: 2.5vw;
+  height: 2.5vw;
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
   fill: #9D8781;
   stroke: #9D8781;
   stroke-width: 2;
@@ -107,18 +116,21 @@ z-index: -1;
 .form-text {
   font-family: 'Bellota';
   color: #9D8781;
-  font-size: 25px;
-  margin-left: 20px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-left: 1.5vw;
   text-align: left;
   justify-content: center;
 }
+
 .hint {
-  display: none; 
-  font-size: 12px;
-  color: #9D8781; 
-  margin-top: 5px; 
-  font-family: 'Bellota'
+  display: none;
+  font-size: clamp(0.8rem, 1.2vw, 1.1rem); /* стало меньше */
+  color: #9D8781;
+  margin-top: 1vh;
+  font-family: 'Bellota';
 }
+
+/* Градиентный текст — не изменён */
 .gradient-text {
   position: absolute; 
   top: -7%;
@@ -139,8 +151,6 @@ z-index: -1;
   margin-right: 10px;
   -webkit-text-fill-color: transparent; 
   z-index: 1;
-  
-
 }
 
 .second-word {
@@ -149,8 +159,8 @@ z-index: -1;
   background-clip: text; 
   -webkit-text-fill-color: transparent; 
   z-index: 1;
-
 }
+
 @font-face {
   font-family: 'Bellota';
   src: url(../fonts/Bellota-Regular.ttf) format("truetype");

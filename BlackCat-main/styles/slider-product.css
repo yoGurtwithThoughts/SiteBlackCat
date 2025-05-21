@@ -5,141 +5,147 @@
     font-weight: normal;
 }
 
-/* Стиль для градиентного текста (заголовка) */
+/* Заголовок */
 .gradient-texts {
-    position: absolute; 
-    top: 3%; /* Расположение сверху */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Точный центр по горизонтали */
-    font-size: 64px; /* Размер шрифта */
-    font-family: 'Bellota'; /* Шрифт заголовка */
+    position: absolute;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(28px, 5vw, 64px);
+    font-family: 'Bellota';
     font-weight: bold;
-    text-align: center; /* Выравнивание текста по центру */
-    color: #fff; /* Цвет текста */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Добавляем тень для глубины */
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Стиль для карточки товара */
+/* Карточка товара */
 .card-slider {
-    width: 250px; /* Уменьшаем ширину карточки */
-    height: 300px; /* Уменьшаем высоту карточки */
-    background-color: #533529; /* Цвет фона */
-    border-radius: 15px; /* Скругленные углы */
-    overflow: hidden; /* Скрываем содержимое за пределами карточки */
+    width: clamp(180px, 22vw, 250px);
+    height: clamp(240px, 35vh, 300px);
+    background-color: #533529;
+    border-radius: 1.2vw;
+    overflow: hidden;
     position: relative;
-    margin: 0 5px; /* Маленький отступ между карточками */
-    transition: transform 0.3s ease; /* Анимация при наведении */
+    margin: 0 1vw;
+    transition: transform 0.3s ease;
 }
-
 
 .card-slider:hover::before {
-    background-color: rgba(0, 0, 0, 0.5); /* Тёмный полупрозрачный фон при наведении */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Изображение внутри карточки */
+/* Изображение */
 .card img {
-    width: 100%; /* Занимает всю ширину карточки */
-    height: 70%; /* Высота изображения */
-    object-fit: cover; /* Сохраняем пропорции изображения */
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
 }
 
+/* Подложка под заголовок */
 .card-title-line {
     position: absolute;
     bottom: 0;
-    height: 45px;
+    height: 17%;
     left: 0;
     right: 0;
-    padding: 10px;
-    background-color: rgba(254, 254, 254, 0.4); 
+    padding: 1vh;
+    background-color: rgba(254, 254, 254, 0.4);
     z-index: 0;
 }
-/* Название товара */
+
+/* Название */
 .card-title {
     position: absolute;
-    bottom: 10px; /* Располагаем над линией */
+    bottom: 5%;
     left: 0;
     right: 0;
     text-align: center;
-    font-family: 'Arsenal'; /* Используем заданный шрифт */
+    font-family: 'Arsenal';
     color: white;
-    font-size: 1.2rem;
+    font-size: clamp(14px, 1.4vw, 20px);
     z-index: 1;
 }
 
 /* Иконка корзины */
 .cart-icon {
     position: absolute;
-    bottom: 50px; /* Располагаем выше названия */
-    right: 10px;
-    color: white;
-    font-size: 1.5rem; /* Размер иконки */
-    z-index: 2;
-    cursor: pointer; /* Добавляем курсор указателя */
-    background-image: url('../images/card-icon/cart.svg'); /* Путь к иконке */
-    background-repeat: no-repeat;
-    background-size: contain;
+    bottom: 20%;
+    right: 5%;
     width: 24px;
     height: 24px;
+    background-image: url('../images/card-icon/cart.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 2;
 }
+
+/* Индикаторы */
 .carousel-indicators button {
     width: 12px;
     height: 12px;
     background-color: #bbb;
     border-radius: 50%;
     border: none;
-    margin: 0 5px;
+    margin: 0 0.5vw;
     transition: background-color 0.3s ease;
 }
 
 .carousel-indicators .active {
-    background-color: #333; /* Цвет активного индикатора */
+    background-color: #333;
 }
 
 .carousel-indicators button:hover {
-    background-color: #555; /* Цвет при наведении */
+    background-color: #555;
 }
 
-/* Стиль для иконок внутри кнопок */
+/* Иконка в кнопке */
 .custom-icon {
-    width: 100%; /* Занимает всю ширину кнопки */
-    height: 100%; /* Занимает всю высоту кнопки */
-    background-size: contain; /* Масштабируем иконку под размер кнопки */
-    background-repeat: no-repeat; /* Без повтора */
-    background-position: center; /* Центрируем иконку */
-    transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s ease;
 }
+
+/* Кнопка с иконкой */
 .custom-carousel-btn {
-    background: none; /* Убираем фон у кнопки */
+    background: none;
     border: none;
-    padding: 0;
+    padding: 0.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px; /* Фиксированный размер кнопки */
-    height: 50px;
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 5vw, 50px);
 }
 
 .custom-carousel-btn img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Сохранение пропорций */
+    object-fit: contain;
 }
+
 .custom-carousel-btn.inactive img {
-    opacity: 0.3; /* Делаем кнопку блеклой */
-    pointer-events: none; /* Отключаем клик */
+    opacity: 0.3;
+    pointer-events: none;
 }
+
+/* Кнопка "Смотреть товары" */
 .btnprod-custom {
     background-image: radial-gradient(circle, #E0A872, #E0A872);
     color: #fcecd0;
     border-radius: 50px;
-    font-size: 25px;
-    height: 60px;
-    width: 340px;
+    font-size: clamp(16px, 2vw, 25px);
+    height: clamp(40px, 8vh, 60px);
+    width: clamp(200px, 50vw, 340px);
     font-family: 'Bellota';
     border: none;
     cursor: pointer;
     position: relative;
-    margin-left: 50px;
+    margin-left: 5vw;
     z-index: 1;
 }
 
@@ -159,31 +165,29 @@
     background-color: rgba(84, 55, 43, 0.9);
     transform: scale(1.05);
 }
+
+/* Обертка карусели */
 .carousel-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2vw;
+    padding: 2vh 0;
 }
 
+/* Сами карточки */
 .carousel {
     display: flex;
-    /* Дополнительные стили для карусели */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5vw;
 }
 
+/* Контролы карусели */
 .carousel-controls {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px; /* Расстояние между кнопками */
-}
-
-.custom-carousel-btn {
-    background: transparent;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.custom-carousel-btn img {
-    width: 30px; /* Регулируйте размер иконок по вашему усмотрению */
+    gap: 1vh;
 }

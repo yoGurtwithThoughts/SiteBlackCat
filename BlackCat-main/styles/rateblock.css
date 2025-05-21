@@ -1,36 +1,43 @@
 .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .image-block {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .image-block img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .carousel-control-prev, .carousel-control-next {
-            filter: brightness(0) invert(1); /* Белые стрелки */
-        }
+    max-width: 90vw;
+    margin: auto;
+    padding: 2vh 3vw;
+}
 
-    .custom-img {
-    max-width: 600px;     /* Задаём нужную ширину */
+.image-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(200px, 40vh, 300px); /* адаптивная высота */
+    border-radius: 1vw;
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: brightness(0) invert(1); /* белые стрелки */
+}
+
+.custom-img {
+    max-width: 80vw;
     width: 100%;
     height: auto;
     object-fit: contain;
-  }
-  .center-absolute {
+}
+
+.center-absolute {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 600px;
+    max-width: 80vw;
     width: 100%;
-  }
+    padding: 1vh;
+}

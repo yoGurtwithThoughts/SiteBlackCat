@@ -1,14 +1,18 @@
 .background-containerblog {
-  background-image: url('../images/ReserveBack.svg'); /* Укажите путь к вашему фоновому изображению */
-  height: 550px; /* Высота будет зависеть от содержимого */
-  width: 100%; /* Занимает всю ширину родительского контейнера */
-  position: relative; /* Относительное положение */
-  background-size: cover; /* Изображение заполняет контейнер */
-  opacity: 0.75; /* Прозрачность фона */
-
-z-index: -1;
+  background-image: url('../images/ReserveBack.svg');
+  height: 60vh; /* Адаптивная высота: 60% от высоты экрана */
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center; /* Центрируем фон */
+  background-repeat: no-repeat;
+  opacity: 0.75;
+  z-index: -1;
 }
+
 .container {
-  position: relative; /* Устанавливаем относительное положение для контейнера */
-  z-index: 1; /* Устанавливаем z-index выше, чем у фона */
+  position: relative;
+  width: 100%;
+  padding: 2vh 5vw; /* Адаптивные внутренние отступы */
+  z-index: 1;
 }
