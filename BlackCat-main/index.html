@@ -2,8 +2,7 @@
 <div class="html">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.65, maximum-scale=1.0, user-scalable=yes">
         <title>Black Cat</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="styles/app-bar.css" rel="stylesheet">
@@ -14,147 +13,174 @@
         <link href="styles/slider-product.css" rel="stylesheet">
         <link href="styles/back.css" rel="stylesheet">
         <link href="styles/rateblock.css" rel="stylesheet">
+        <link href="styles/pup-up.css" rel="stylesheet">
+        <link href="styles/footer.css" rel="stylesheet">
     </head>
 
     <body>
-        <div class="glow"></div>
-        <app-bar class="app-bar-castom">
-            <img src="images/logo dauncat 1 (1).svg" class="img-logo" />
-            <script src="../script/app-bar-script.js" defer></script>
-            <div class="button-container">
-                <button class="btn-link">
-                    <a link="#">
-                        <img class="img-button" src="images/Cart.svg" height="25px" width="25px" margin-left="55px" />
-                    </a>
-                </button>
-            </div>
-            <div class="button-container">
-                <div class="container-space" width="150px"></div>
-                <button class="btn-link">
-                    <a link="#">
+        <div class="site-wrapper">
+            <div class="glow"></div>
+            <app-bar class="app-bar-castom">
+                <img src="images/logo dauncat 1 (1).svg" class="img-logo" />
+                <script src="../script/app-bar-script.js" defer></script>
+                <div class="button-container">
+                    <button id="cart-button" class="btn-link">
+                        <a link="#">
+                            <img class="img-button" src="images/Cart.svg" height="45px" width="45px"
+                                style="margin-left:55px;" />
+                        </a>
+                    </button>
+                </div>
+                <div class="button-container">
+                    <div class="container-space" style="width: 150px;"></div>
+
+                    <a href="#menu" class="btn-link">
                         <p>Меню</p>
                     </a>
-                </button>
-                <button class="btn-link">
-                    <a link="#">
+
+                    <a href="#booking" class="btn-link">
                         <p>Бронь</p>
                     </a>
-                </button>
-                <button class="btn-link">
-                    <a link="#">
+
+                    <a href="#blog" class="btn-link">
                         <p>Блог</p>
                     </a>
-                </button>
-                <button class="btn-link">
-                    <a link="#">
+
+                    <a href="#contacts" class="btn-link">
                         <p>Контакты</p>
                     </a>
-                </button>
-            </div>
-        </app-bar>
+                </div>
+            </app-bar>
+        </div>
+<!-- Корзина -->
+<div id="cartPopup" class="cart-popup d-none">
+  <div class="cart-popup-content">
+    <div id="cartItemsList" class="cart-items-list">Товары:</div>
+    <div id="cartTotalPrice" class="cart-total-price">Итого: 0 ₽</div>
+    <button class="popup-checkout-btn popup-close-btn-cart">Заказать</button>
+    <button id="cartCloseBtn" class="popup-close-btn-cart">Закрыть</button>
+  </div>
 </div>
-
-
-<div class="container-fluid d-flex">
-    <div class="row w-100 align-items-center justify-content-center no-gutters">
-        <div class="col-md-7 text-light d-flex flex-column align-items-center justify-content-center">
-            <div class="d-flex flex-column align-items-center h-50">
-                <div class="image-title mb-6 d-flex justify-content-center align-items-center flex-wrap">
-                    <img alt="Black Cat " src="images/Black cat.svg" class="image-title" style="max-height: 300px;" />
-
-                    <p class="subtitle mb-2 text-center align-items-strart">В каждом глотке — уют и вдохновение!
-                    </p>
-                    <div class="d-flex justify-content-center mb-2">
-                        <button class="btn btn-custom mr-2">Купить</button>
-                        <button class="btn btn-custom">Забронировать</button>
+        <!-- Верхняя секция -->
+        <div class="container-fluid d-flex align-items-center">
+            <div class="row w-100 align-items-center justify-content-center no-gutters">
+                <div class="col-md-7 text-light d-flex flex-column align-items-center justify-content-center px-4">
+                    <div class="d-flex flex-column align-items-center h-100">
+                        <div class="image-title d-flex flex-column justify-content-center align-items-center flex-wrap">
+                            <img alt="Black Cat" src="images/Black cat.svg" class="image-title mb-2 img-fluid"
+                                style="max-height: 30vh;" />
+                            <p class="subtitle text-center mb-2">В каждом глотке — уют и вдохновение!</p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-custom me-2"
+                                    onclick="document.getElementById('menu-section').scrollIntoView({behavior: 'smooth'});">Купить</button>
+                                <button class="btn btn-custom"
+                                    onclick="document.getElementById('bookingSection').scrollIntoView({behavior: 'smooth'});">Забронировать</button>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="col-md-5 right-section d-flex align-items-end p-0">
+                    <img class="imgright" src="images/right.svg" />
                 </div>
             </div>
         </div>
-        <div class="col-md-5 right-section d-flex justify-content-end align-items-end p-0">
-            <img class="imgright" src="images/right.svg" />
+        <div class="container align-items-center" style="margin-top: 10rem; padding-top: 12rem;">
+            <div class="row justify-content-center">
+                <div class="col-12 d-flex justify-content-center mb-4">
+                    <img src="images/History.svg" alt="History" class="responsive-image" />
+                </div>
+                <div class="col-12 d-flex justify-content-center mb-4" style="margin-top: 4rem; padding-top: 4rem;">
+                    <img src="images/SaleBanner.svg" alt="Sale Banner" />
+                </div>
+            </div>
+        </div><div class="container text-center" id="booking">
+            <!-- Заголовок -->
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1 class="gradient-texts">
+                        <span class="first-word">Забронировать</span>
+                        <span class="second-word">столик</span>
+                    </h1>
+                </div>
+            </div>
         </div>
+       <div class="reserve-section d-flex flex-column align-items-center mt-5" id="bookingSection">
+  <div class="content-row w-100">
+    <div class="image-col position-relative">
+      <div class="image-wrapper">
+        <img src="images/Reserve Img.png" alt="Coffee cup" class="img-fluid" />
+      </div>
     </div>
-</div>
-<div class="container-fluid custom-container mt-5 pt-5">
-  <div class="row justify-content-center">
-    <div class="col-12 d-flex justify-content-center">
-      <img src="images/History.svg" class="img-fluid centered-big-image" alt="History">
+    <div class="form-col d-flex justify-content-center align-items-center">
+      <form id="bookingForm" class="form-wrapper w-100" novalidate>
+        <!-- Поле "Дата" -->
+        <div class="form-field">
+          <img class="icon-form" src="images/calendar.svg" alt="иконка" />
+          <input type="text" id="data" class="form-control" placeholder="Дата"
+            onfocus="changePlaceholder(this, 'ДД.ММ.ГГГГ')" onblur="resetPlaceholder(this, 'Дата')"
+            autocomplete="off" />
+          <div class="error-message" id="error-data"></div>
+        </div>
+        <!-- Поле "Время" -->
+        <div class="form-field">
+          <img class="icon-form" src="images/clock.svg" alt="иконка" />
+          <input type="text" id="time" class="form-control" placeholder="Время"
+            onfocus="changePlaceholder(this, 'ЧЧ:ММ')" onblur="resetPlaceholder(this, 'Время')"
+            autocomplete="off" />
+          <div class="error-message" id="error-time"></div>
+        </div>
+        <!-- Поле "Имя" -->
+        <div class="form-field">
+          <img class="icon-form" src="images/person.svg" alt="иконка" />
+          <input type="text" id="name" class="form-control" placeholder="Ваше имя"
+            onfocus="changePlaceholder(this, 'Иван Иванов')" onblur="resetPlaceholder(this, 'Ваше имя')"
+            autocomplete="off" />
+          <div class="error-message" id="error-name"></div>
+        </div>
+        <!-- Поле "Телефон" -->
+        <div class="form-field">
+          <img class="icon-form" src="images/phone.svg" alt="иконка" />
+          <input type="tel" id="phone" class="form-control" placeholder="Ваш номер телефона"
+            onfocus="changePlaceholder(this, '+7 (999) 999-99-99')" onblur="resetPlaceholder(this, 'Ваш номер телефона')"
+            autocomplete="off" />
+          <div class="error-message" id="error-phone"></div>
+        </div>
+        <!-- Поле "Email" -->
+        <div class="form-field">
+          <img class="icon-form" src="images/mail.svg" alt="иконка" />
+          <input type="email" id="email" class="form-control" placeholder="Ваша почта"
+            onfocus="changePlaceholder(this, 'example@gmail.com')" onblur="resetPlaceholder(this, 'Ваша почта')"
+            autocomplete="off" />
+          <div class="error-message" id="error-email"></div>
+        </div>
+        <!-- Кнопка "Забронировать" -->
+        <div class="mt-3 text-end">
+          <button type="submit" class="btn-custom">Забронировать</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
-<div class="container-fluid justify-content-center align-items-center h-60
-      align-content-center ">
-    <div class="row justify-content-center align-items-center h-100 align-content-center">
-        <div class="col text-center">
-            <img src="images/SaleBanner.png" class="img-fluid" alt="description">
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid background-container mt-5 d-flex flex-column align-items-center">
-    <div class="row w-100">
-        <div class="col-md-6 image-cell position-relative">
-            <div class="title-images">
-                <img src="images/Reserve Img.png" alt="Coffe cup" class="img-fluid" />
+        <div id="bookingPopup" class="booking-popup d-none">
+            <div class="booking-popup-content">
+                <div id="bookingPopupText" class="popup-text"></div>
+                <button class="popup-close-btn" onclick="closePopup()">Закрыть</button>
             </div>
         </div>
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-            <form class="w-100"> <!-- Добавляем класс w-100 для формы -->
-                <div class="form-field">
-                    <img class="icon-form" src="images/calendar.svg" alt="иконка">
-                    <input type="text" id="data" class="form-control" placeholder="Дата"
-                        onfocus="changePlaceholder(this, 'ДД.ММ.ГГГГ')" onblur="resetPlaceholder(this, 'Дата')">
-                </div>
-                <div class="form-field">
-                    <img class="icon-form" src="images/clock.svg" alt="иконка">
-                    <input type="text" id="time" class="form-control" placeholder="Время"
-                        onfocus="changePlaceholder(this, 'ЧЧ:ММ')" onblur="resetPlaceholder(this, 'Время')">
-                </div>
-                <div class="form-field">
-                    <img class="icon-form" src="images/person.svg" alt="иконка">
-                    <input type="text" id="name" class="form-control" placeholder="Ваше имя"
-                        onfocus="changePlaceholder(this, 'Иван Иванов')" onblur="resetPlaceholder(this, 'Ваше имя')">
-                </div>
-                <div class="form-field">
-                    <img class="icon-form" src="images/phone.svg" alt="иконка">
-                    <input type="tel" id="phone" class="form-control" placeholder="Ваш номер телефона"
-                        onfocus="changePlaceholder(this, '+7 (999) 999-99-99')"
-                        onblur="resetPlaceholder(this, 'Ваш номер телефона')">
-                </div>
-                <div class="form-field">
-                    <img class="icon-form" src="images/mail.svg" alt="иконка">
-                    <input type="email" id="email" class="form-control" placeholder="Ваша почта"
-                        onfocus="changePlaceholder(this, 'example@gmail.com')"
-                        onblur="resetPlaceholder(this, 'Ваша почта')">
-                </div>
-                <!-- Кнопка "Забронировать" -->
-                <div class="mt-5 text-end">
-                    <button type="submit" class="btn-custom">Забронировать</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <h1 class="gradient-text">
-        <span class="first-word">Забронировать</span>
-        <span class="second-word">столик</span>
-    </h1>
 </div>
 <div class="container text-center">
     <!-- Заголовок -->
     <div class="row">
         <div class="col">
-            <h1 class="gradient-texts">
+            <h1 class="gradient-texts" id="menu">
                 <span class="first-word">Наше</span>
                 <span class="second-word">меню</span>
             </h1>
         </div>
     </div>
 </div>
-
-
 <!-- Кнопки категории -->
-<div class="container text-center mt-3">
+<div class="container text-center mt-3 align-items-center">
     <div class="row mt-3">
         <div class="col mt-5">
             <div class="spacer my-5"></div>
@@ -162,19 +188,17 @@
             <button class="btnprod btn-sm btn-custom ms-2" onclick="filterCategory('desserts')">Десерты</button>
         </div>
     </div>
-</div>
-
-<!-- Карусель -->
-<div class="container d-flex align-items-center justify-content-center vh-100">
+</div><!-- Карусель -->
+<div class="container d-flex align-items-center justify-content-center vh-100" id="menu-section">
     <div class="row h-75 overflow-hidden">
         <div class="col">
             <div id="coffeeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                 <div class="carousel-inner">
                     <!-- Слайд 1 -->
-                    <div class="carousel-item coffee">
+                    <div class="carousel-item coffee active">
                         <div class="row justify-content-center">
                             <div class="col-md-4 col-sm-6 col-12">
-                                <div class="card-slider">
+                                <div class="card-slider" data-name="Раф" data-price="248">
                                     <img src="images/card-images/Raf.png" alt="Раф" class="img-fluid rounded-top">
                                     <div class="card-body text-center">
                                         <div class="card-title-line"></div>
@@ -184,7 +208,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <div class="card-slider">
+                                <div class="card-slider" data-name="Латте" data-price="200">
                                     <img src="images/card-images/Latte.png" alt="Латте" class="img-fluid rounded-top">
                                     <div class="card-body text-center">
                                         <div class="card-title-line"></div>
@@ -194,7 +218,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <div class="card-slider">
+                                <div class="card-slider" data-name="Капучино" data-price="225">
                                     <img src="images/card-images/Capuchino.png" alt="Капучино"
                                         class="img-fluid rounded-top">
                                     <div class="card-body text-center">
@@ -217,9 +241,9 @@
                     </div>
                     <!-- Десерты -->
                     <div class="carousel-item desserts">
-                        <div class="row justify-content-center g-4"> <!-- Увеличенные отступы -->
+                        <div class="row justify-content-center g-4">
                             <div class="col-md-4 col-sm-6 col-12">
-                                <div class="card-slider">
+                                <div class="card-slider" data-name="Панкейки" data-price="350">
                                     <img src="images/card-images/PanCake.png" class="img-fluid rounded-top">
                                     <div class="card-body text-center">
                                         <div class="card-title-line"></div>
@@ -229,7 +253,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <div class="card-slider">
+                                <div class="card-slider" data-name="Тирамису" data-price="150">
                                     <img src="images/card-images/Tiramicco.png" class="img-fluid rounded-top">
                                     <div class="card-body text-center">
                                         <div class="card-title-line"></div>
@@ -239,7 +263,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <div class="card-slider">
+                                <div class="card-slider" data-name="Круассан" data-price="180">
                                     <img src="images/card-images/Croissant.png" class="img-fluid rounded-top">
                                     <div class="card-body text-center">
                                         <div class="card-title-line"></div>
@@ -249,13 +273,11 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Стрелка-заглушка внизу карточек -->
                         <div class="container text-center mt-3">
                             <div class="row mt-3">
                                 <div class="col mt-5">
-                                    <img class="img" src="../BlackCat-main/images/Arrows.png" height="50px"
-                                        width="auto" />
+                                    <img class="img" src="images/Arrows.png" height="50px" width="auto" />
                                 </div>
                             </div>
                         </div>
@@ -264,6 +286,14 @@
             </div>
         </div>
     </div>
+</div>
+<!-- Попап "добавлено в корзину" -->
+<div class="cart-add-popup d-none" id="cartAddPopup">
+  <div class="cart-popup-content">
+    <p id="cartAddText">Товар добавлен в корзину</p>
+    <button id="cartAddMoreBtn" class="popup-close-btn-cart">Добавить ещё</button>
+    <button id="cartAddCloseBtn" class="popup-close-btn-cart">Закрыть</button>
+  </div>
 </div>
 <!-- Заголовок "Наш блог" ПЕРЕМЕЩЁН СЮДА -->
 <div class="container text-center mt-7">
@@ -276,35 +306,36 @@
         </div>
     </div>
 </div>
-<div
-    class="container-fluid background-containerblog mt-5 d-flex flex-column align-items-center position-relative overflow-hidden">
+<div class="container-fluid background-containerblog 
+    mt-5 d-flex flex-column align-items-center position-relative overflow-hidden" id="blog">
 
     <!-- Вьюпорт: отступ сверху для опускания картинок -->
     <div id="carouselViewport" class="w-100 overflow-hidden mt-5" style="max-width: 90vw;">
         <div id="carouselTrack" class="d-flex transition-transform" style="transform: translateX(0);">
-            <img src="../BlackCat-main/images/Blog4.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
-            <img src="../BlackCat-main/images/blog3.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
-            <img src="../BlackCat-main/images/blog2.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
-            <img src="../BlackCat-main/images/blog1.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
+            <img src="images/Blog4.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
+            <img src="images/blog3.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
+            <img src="images/blog2.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
+            <img src="images/blog1.svg" class="img-fluid me-3 flex-shrink-0" style="width: 28vw;" />
         </div>
     </div>
 
     <!-- Кнопка вправо: остаётся внизу -->
     <div class="position-absolute" style="right: 20px; bottom: 10px;">
         <button onclick="scrollRight()" class="btn p-0 border-0 bg-transparent">
-            <img src="../BlackCat-main/images/list.svg" style="height: 30px;" alt="Right Arrow" />
+            <img src="images/list.svg" style="height: 30px;" alt="Right Arrow" />
         </button>
     </div>
 </div>
 <div class="container text-center mt-1">
     <div class="row mt-3 justify-content-center">
         <div class="col-auto mt-3 d-flex justify-content-center">
-            <img class="img mx-auto d-block" src="../BlackCat-main/images/reviewimg.svg"
-                style="max-width: 120%; height: 120%;" />
+            <img class="img mx-auto d-block" src="images/reviewimg.svg" style="max-width: 120%; height: 120%;" />
         </div>
     </div>
 </div>
-
+<div class="full-screen-container mt-3" id="contacts">
+    <img src="images/foter.svg" alt="Sale Banner" class="full-screen-img" />
+</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -312,6 +343,11 @@
 <script src="script/inputhint.js"></script>
 <script src="script/active-inactive-button.js"></script>
 <script src="script/flter.js"></script>
+<script src="script/pupmessage.js"></script>
+<script src="script/cart.js"></script>
+<script src="script/zoom-contol.js"></script>
 </body>
+  
+
 
 </html>

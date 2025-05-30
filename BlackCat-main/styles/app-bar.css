@@ -1,30 +1,44 @@
 @font-face {
-    font-family: 'dansing-script';
-    src: url(../fonts/DancingScript-VariableFont_wght.ttf) format("truetype");
-    font-style: normal;
+  font-family: 'DancingScript';
+  src: url('../fonts/DancingScript-VariableFont_wght.ttf') format("truetype");
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bellota';
-    src: url(../fonts/Bellota-Regular.ttf) format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Bellota';
+  src: url('../fonts/Bellota-Regular.ttf') format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 body {
-    margin: 0;
-    background-image: url('../images/PatternBack.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow-x: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: -2;
-    font-size: 1.2vw; /* Адаптивный базовый размер шрифта */
+  margin: 0;
+  background-image: url('../images/PatternBack.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: -2;
+  font-size: 1vw; /* адаптивный базовый размер шрифта */
+  
+  min-width: 80vw;   /* минимальная ширина 80% окна */
+  min-height: 80vh;  /* минимальная высота 80% окна */
 }
-
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* центр по горизонтали */
+    justify-content: center; /* центр по вертикали, если нужно */
+    text-align: center;      /* выравнивание текста по центру */
+    margin: 0 auto;
+    padding: 0 1rem;
+    min-height: 100vh;       /* чтобы тело занимало всю высоту окна */
+  }
+}
 .app-bar-castom {
     height: 8vh; /* Высота панели — 8% от высоты окна */
     width: 100%;
@@ -35,65 +49,197 @@ body {
     right: 0;
     justify-content: space-between;
     padding: 0 2%;
-    z-index: 1;
+    z-index: 20;
     transition: top 0.3s ease;
     color: #F7E1BC !important;
 }
 
 .glow {
-    position: fixed;
-    height: 20vh;  /* 20% от высоты экрана */
-    width: 20vh;   /* квадратная область */
-    background: url(../images/Glow2.png) no-repeat center center;
-    background-size: cover;
-    z-index: 1;
+  position: fixed;
+  height: 20vh; /* 20% от высоты экрана */
+  width: 20vh;  /* Квадратная область */
+  background: url('../images/Glow2.png') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
 }
 
 .img-logo {
-    position: relative;
-    height: 6vh;
-    width: 6vh;
-    z-index: 1;
+  position: relative;
+  height: 6vh;
+  width: 6vh;
+  z-index: 1;
 }
 
 .button-container {
-    height: auto;
-    width: 100%;
-    margin-top: 2vh;
-    justify-content: flex-end;
-    display: flex;
+  height: auto;
+  width: 100%;
+  margin-top: 1vh;
+  justify-content: flex-end;
+  display: flex;
+  z-index: 45;
 }
 
 .btn-link {
-    background: transparent;
-    border: none;
-    text-align: center;
-    color: #F7E1BC;
-    font-family: 'Bellota';
-    font-size: 2vw;
-    text-decoration: none !important;
-    transition: color 0.3s ease, transform 0.2s ease !important;
-    overflow: hidden;
-    cursor: pointer;
-    margin-right: 2vw;
-}
-
-.btn-link:hover,
-.btn-link:focus {
-    color: #F7E1BC;
+  background: transparent;
+  border: none;
+  text-align: center;
+  color: #F7E1BC;
+  font-family: 'Bellota';
+  font-size: 2vw;
+  text-decoration: none !important;
+  transition: color 0.3s ease, transform 0.2s ease !important;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 2vw;
 }
 
 .btn-link:active {
-    color: #F7E1BC !important;
-    transform: scale(0.95);
-    transition: transform 0.1s ease-in !important;
+  color: #F7E1BC !important;
+  transform: scale(0.95);
+  transition: transform 0.1s ease-in !important;
 }
 
 a {
-    color: #F7E1BC !important;
-    outline: none !important;
+  color: #F7E1BC !important;
+  outline: none !important;
 }
 
 a:hover {
-    color: #F7E1BC !important;
+  color: #F7E1BC !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.cart-popup, .cart-add-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(102, 55, 29, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cart-popup:not(.d-none),
+.cart-add-popup:not(.d-none) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cart-popup-content {
+  background-color: rgba(102, 55, 29, 0.9);
+  color: #fff;
+  padding: 2.5vw 2vw;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  min-width: 300px;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  font-family: 'Bellota', cursive, sans-serif;
+  user-select: none;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+
+.cart-popup:not(.d-none) .cart-popup-content {
+  transform: translateY(0);
+}
+
+.popup-close-btn-cart {
+  background-image: radial-gradient(circle, #E0A872, #E0A872);
+  color: #fcecd0;
+  border-radius: 50px;
+  font-size: clamp(14px, 1.5vw, 20px);
+  height: clamp(30px, 5vh, 45px);
+  width: clamp(150px, 30vw, 250px);
+  font-family: 'Bellota', cursive, sans-serif;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-top: 1.5vw;
+  margin-left: 0;
+  z-index: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(224, 168, 114, 0.6);
+}
+
+.popup-close-btn-cart::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-color: rgba(84, 55, 43, 0.45);
+  border-radius: 50px;
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+
+.popup-close-btn-cart:hover {
+  background-color: rgba(84, 55, 43, 0.9);
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(84, 55, 43, 0.9);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.5vw; /* Увеличение шрифта для маленьких экранов */
+  }
+  .app-bar-castom {
+    height: 10vh;
+    top: 1vh;
+    padding: 0 1vw;
+  }
+  .btn-link {
+    font-size: 2.5vw;
+    margin-right: 1.5vw;
+  }
+  .cart-popup-content {
+    padding: 2vw 1.5vw;
+    max-width: 90%;
+    min-width: 250px;
+  }
+  .popup-close-btn-cart {
+    font-size: clamp(12px, 1.5vw, 18px);
+    height: clamp(25px, 4vh, 40px);
+    width: clamp(120px, 25vw, 200px);
+    margin-top: 1vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1vw; /* Уменьшение шрифта для больших экранов */
+  }
+  .app-bar-castom {
+    height: 6vh;
+    top: 2vh;
+    padding: 0 3vw;
+  }
+  .btn-link {
+    font-size: 1.8vw;
+    margin-right: 2.5vw;
+  }
+  .cart-popup-content {
+    padding: 3vw 2.5vw;
+    max-width: 450px;
+  }
+  .popup-close-btn-cart {
+    font-size: clamp(16px, 1.5vw, 22px);
+    height: clamp(35px, 5vh, 50px);
+    width: clamp(180px, 30vw, 300px);
+    margin-top: 2vw;
+  }
 }

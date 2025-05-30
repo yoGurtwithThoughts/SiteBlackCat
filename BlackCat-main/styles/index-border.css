@@ -1,119 +1,333 @@
+/* styles/responsive.css */
+
+/* Smooth scroll behavior */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-/* Шрифты */
+/* Fonts */
 @font-face {
-    font-family: 'dansing-script';
-    src: url('fonts/DancingScript.ttf') format('truetype');
+  font-family: 'dansing-script';
+  src: url('fonts/DancingScript.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Bellota';
-    src: url(../fonts/Bellota-Regular.ttf) format("truetype");
+  font-family: 'Bellota';
+  src: url('../fonts/Bellota-Regular.ttf') format('truetype');
 }
 
+/* Base container styles */
 .container-fluid {
-    display: flex;
-    height: 100vh;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto; /* Remove fixed height for responsiveness */
+  z-index: -1;
 }
 
-/* Левая картинка */
+/* Image title */
 .image-title img {
-    display: block;
-    margin: 0 auto;
-    max-height: 70vh;
-    width: auto;
-    max-width: 90vw;
-    object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-height: 70vh;
+  width: auto;
+  max-width: 90vw;
+  object-fit: cover;
 }
 
-/* Левая секция */
+/* Left section */
 .left-section {
-    color: #f5e6c8;
-    flex: 1 1 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 4vh 3vw;
+  color: #f5e6c8;
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4vh 3vw;
 }
 
-/* Правая секция с картинкой */
+/* Right section */
 .right-section {
-    flex: 1 1 40%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 10vh;
-    padding-right: 3vw;
-    height: 100%;
-    position: relative;
-    z-index: -1;
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 10vh;
+  padding-right: 3vw;
+  height: 100%;
+  position: relative;
+  z-index: -1;
 }
 
-/* Заголовок */
+/* Subtitle */
 .subtitle {
-    font-size: clamp(18px, 2.5vw, 35px);
-    font-family: 'Bellota';
-    color: #DABB9E;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+  font-size: clamp(18px, 2.5vw, 35px);
+  font-family: 'Bellota';
+  color: #dabb9e;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
-/* Кнопка */
+/* Custom button */
 .btn-custom {
-    background-image: radial-gradient(circle, #E0A872, #E0A872);
-    color: #fcecd0;
-    border-radius: 50px;
-    font-size: clamp(16px, 2vw, 25px);
-    height: clamp(40px, 6vh, 60px);
-    width: clamp(200px, 40vw, 340px);
-    font-family: 'Bellota';
-    border: none;
-    cursor: pointer;
-    position: relative;
-    margin-left: 5vw;
-    z-index: 1;
+  background-image: radial-gradient(circle, #e0a872, #e0a872);
+  color: #fcecd0;
+  border-radius: 50px;
+  font-size: clamp(16px, 2vw, 25px);
+  height: clamp(40px, 6vh, 60px);
+  width: clamp(200px, 40vw, 340px);
+  font-family: 'Bellota';
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-left: 5vw;
+  z-index: 1;
 }
 
 .btn-custom::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background-color: rgba(84, 55, 43, 0.4);
-    border-radius: 50px;
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-color: rgba(84, 55, 43, 0.4);
+  border-radius: 50px;
+  z-index: -1;
 }
 
 .btn-custom:hover {
-    background-color: rgba(84, 55, 43, 0.9);
-    transform: scale(1.05);
+  background-color: rgba(84, 55, 43, 0.9);
+  transform: scale(1.05);
 }
 
+/* Right section image */
 .imgright svg {
-   width: clamp(100px, 45vw, 300px); /* адаптивная ширина */
-    height: auto;                    /* сохраняем пропорции */
-    display: block;
+  width: clamp(100px, 45vw, 300px);
+  height: auto;
+  display: block;
 }
 
-.custom-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 15vh; /* Отступ сверху, чтобы не налезала */
-    margin-top: 5vh;   /* Дополнительный внешний отступ сверху */
-}
-
+/* Centered big image */
 .centered-big-image {
-    width: 90%;
-    max-width: 1600px;
+  width: 90%;
+  max-width: 1600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive image */
+.responsive-image {
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Large screens */
+@media (min-width: 1600px) {
+  .responsive-image {
+    max-width: 1400px;
+  }
+}
+
+/* Bootstrap no-gutters replacement */
+.row.g-0 {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.g-0 > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Small screen centering and compacting */
+@media (max-width: 576px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Center all containers */
+  .container, .container-fluid, .site-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     height: auto;
+  }
+
+  /* App bar */
+  .app-bar-castom {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .img-logo {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .button-container a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  #cart-button img {
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+  }
+
+  .container-space {
+    display: none;
+  }
+
+  /* Top section */
+  .left-section, .right-section {
+    flex: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2vh 5vw;
+  }
+
+  .right-section {
+    padding-top: 2vh;
+    padding-right: 0;
+  }
+
+  .image-title img {
+    max-width: 80vw;
+    max-height: 50vh;
+  }
+
+  .subtitle {
+    font-size: clamp(14px, 4vw, 18px);
+    margin: 1vh 0;
+  }
+
+  .btn-custom {
+    width: clamp(150px, 80vw, 250px);
+    height: clamp(35px, 5vh, 50px);
+    font-size: clamp(12px, 3vw, 16px);
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Booking section */
+  .reserve-section, .content-row {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .image-col img {
+    max-width: 80vw;
+    height: auto;
+  }
+
+  .form-col {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-field input {
+    font-size: 14px;
+  }
+
+  /* Menu section and carousel */
+  #menu-section {
+    height: auto;
+  }
+
+  .carousel-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-item {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card-slider {
+    max-width: 90%;
+    margin: 10px 0;
+  }
+
+  .card-slider img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Blog section */
+  #carouselViewport {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  #carouselTrack {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #carouselTrack img {
+    width: 80vw;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer and images */
+  .full-screen-container img, .responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Popups */
+  .cart-popup, .booking-popup, .cart-add-popup {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .popup-close-btn, .popup-close-btn-cart, .popup-checkout-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Typography */
+  .gradient-texts {
+    font-size: 24px;
+  }
+
+  .gradient-texts span {
     display: block;
+    text-align: center;
+  }
 }

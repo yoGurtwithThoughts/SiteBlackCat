@@ -1,25 +1,27 @@
-.background-container {
-  background-image: url('../images/ReserveBack.svg');
-  height: 85vh;
-  width: 100%;
+.reserve-section {
   position: relative;
+  width: 100%;
+  height: 85vh;
+  padding: 5vh 5vw;
+  overflow: hidden;
+}
+
+.reserve-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../images/ReserveBack.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.75;
-  padding: 5vh 5vw;
-  z-index: -1;
+  z-index: 0;
+  pointer-events: none; /* очень важно, чтобы фон не блокировал клики */
 }
 
-.container {
+.content-row {
   position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 3vh 5vw;
-}
-
-.table-container {
-  z-index: -1;
+  z-index: 1; /* выше, чем фон */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,7 +32,7 @@
   padding: 4vh 3vw;
 }
 
-.image-cell {
+.image-col {
   flex: 2;
   max-width: 60%;
   display: flex;
@@ -38,16 +40,16 @@
   align-items: center;
 }
 
-.title-images img {
+.image-wrapper img {
   width: 100%;
   height: auto;
   max-height: 65vh;
   margin-bottom: 2vh;
 }
 
-.right-columns {
+.form-col {
   flex: 1;
-  z-index: 1;
+  z-index: 4;
   text-align: left;
   margin-left: 3vw;
   display: flex;
@@ -56,7 +58,7 @@
   align-items: flex-end;
 }
 
-.form-container {
+.form-wrapper {
   width: 100%;
   max-width: 80vw;
   display: flex;
@@ -67,7 +69,7 @@
 }
 
 .form-field {
-  z-index: 1;
+  z-index: 5;
   height: 7.5vh;
   background: #FFFF;
   border-radius: 2vh;
@@ -78,7 +80,9 @@
   position: relative;
   width: 100%;
 }
-
+.form-field:first-child {
+  margin-top: 0; /* Чтобы у первого поля не было отступа сверху */
+}
 .form-field input {
   width: 100%;
   height: 100%;
@@ -91,14 +95,14 @@
   outline: none;
   box-shadow: none;
   text-align: left;
-  background-color: transparent;
+  border-color: transparent;
+  background-color: transparent; /* или оставить, если нужно */
 }
 
 .form-field input:focus {
   border: none;
   outline: none;
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .icon-form {
@@ -113,24 +117,7 @@
   stroke-width: 2;
 }
 
-.form-text {
-  font-family: 'Bellota';
-  color: #9D8781;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  margin-left: 1.5vw;
-  text-align: left;
-  justify-content: center;
-}
-
-.hint {
-  display: none;
-  font-size: clamp(0.8rem, 1.2vw, 1.1rem); /* стало меньше */
-  color: #9D8781;
-  margin-top: 1vh;
-  font-family: 'Bellota';
-}
-
-/* Градиентный текст — не изменён */
+/* Градиентный текст */
 .gradient-text {
   position: absolute; 
   top: -7%;
@@ -150,7 +137,7 @@
   background-clip: text; 
   margin-right: 10px;
   -webkit-text-fill-color: transparent; 
-  z-index: 1;
+  z-index: 4;
 }
 
 .second-word {
@@ -158,7 +145,7 @@
   -webkit-background-clip: text; 
   background-clip: text; 
   -webkit-text-fill-color: transparent; 
-  z-index: 1;
+  z-index: 4;
 }
 
 @font-face {
@@ -167,3 +154,27 @@
   font-style: normal;
   font-weight: normal;
 }
+  .form-field {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .form-control {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 0.6rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .form-control.error {
+    border-color: #d9534f;
+  }
+  .error-message {
+    color: #d9534f;
+    font-size: 0.875rem;
+    margin-top: 0.3rem;
+    position: absolute;
+    left: 0;
+    bottom: -1.2rem;
+  }

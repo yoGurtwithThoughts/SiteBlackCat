@@ -1,0 +1,37 @@
+.full-screen-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding-top: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.full-screen-img {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  object-fit: contain; /* Изменено на contain для пропорционального заполнения */
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .full-screen-img {
+    height: 60vh; /* Адаптация для маленьких экранов */
+  }
+}
+
+@media (min-width: 1200px) {
+  .full-screen-img {
+    height: 100vh; /* Полная высота для больших экранов */
+  }
+}
+
+@media (min-width: 2000px) {
+  .full-screen-img {
+    height: 100vh; /* Сохранение полной высоты для огромных экранов */
+  }
+}

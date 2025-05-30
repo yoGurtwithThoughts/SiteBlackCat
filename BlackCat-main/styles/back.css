@@ -1,7 +1,7 @@
 .background-containerblog {
   background-image: url('../images/ReserveBack.svg');
   height: 60vh; /* Адаптивная высота: 60% от высоты экрана */
-  width: 100%;
+  width: 100vw;
   position: relative;
   background-size: cover;
   background-position: center; /* Центрируем фон */
@@ -15,4 +15,33 @@
   width: 100%;
   padding: 2vh 5vw; /* Адаптивные внутренние отступы */
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .background-containerblog {
+    height: 50vh; /* Уменьшаем высоту для маленьких экранов */
+    opacity: 0.65; /* Слегка уменьшаем прозрачность */
+  }
+  .container {
+    padding: 1vh 3vw; /* Уменьшаем отступы для мобильных */
+  }
+}
+
+@media (min-width: 1200px) {
+  .background-containerblog {
+    height: 70vh; /* Увеличиваем высоту для больших экранов */
+    opacity: 0.85; /* Увеличиваем непрозрачность */
+  }
+  .container {
+    padding: 3vh 4vw; /* Увеличиваем отступы для больших экранов */
+  }
+}
+
+@media (min-width: 2000px) {
+  .background-containerblog {
+    height: 75vh; /* Оптимизация для очень больших экранов */
+  }
+  .container {
+    padding: 4vh 5vw; /* Ещё больше отступов для инфопанелей */
+  }
 }

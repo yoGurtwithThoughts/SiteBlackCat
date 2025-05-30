@@ -1,5 +1,4 @@
-
-    let currentCategory = 'coffee'; // По умолчанию отображается кофе
+  let currentCategory = 'coffeeCarousel'; // По умолчанию отображается кофе
 
     function filterCategory(category) {
         const allItems = document.querySelectorAll('.carousel-item');

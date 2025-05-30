@@ -1,0 +1,95 @@
+.booking-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(102, 55, 29, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.booking-popup-content {
+  background-color: rgba(102, 55, 29, 0.85);
+  color: #fff;
+  padding: 2vw;
+  border-radius: 20px;
+  width: 30vw; /* Увеличили ширину */
+  max-width: 600px; /* Увеличили максимальную ширину */
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  font-family: 'Bellota';
+}
+
+.popup-close-btn {
+  background-image: radial-gradient(circle, #E0A872, #E0A872);
+  color: #fcecd0;
+  border-radius: 50px;
+  font-size: clamp(14px, 1.5vw, 20px);
+  height: clamp(30px, 5vh, 45px);
+  width: clamp(150px, 30vw, 250px);
+  font-family: 'Bellota', sans-serif;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-top: 1rem;
+  margin-left: 0;
+  z-index: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.popup-close-btn::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background-color: rgba(84, 55, 43, 0.4);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.popup-close-btn:hover {
+  background-color: rgba(84, 55, 43, 0.9);
+  transform: scale(1.05);
+}
+
+.d-none {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Bellota';
+  src: url(../fonts/Bellota-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .booking-popup-content {
+    width: 90vw; /* Увеличили ширину на маленьких экранах */
+    padding: 1.5vw;
+  }
+  .popup-close-btn {
+    font-size: clamp(12px, 1.5vw, 18px);
+    height: clamp(25px, 4vh, 40px);
+    width: clamp(120px, 25vw, 200px);
+    margin-top: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .booking-popup-content {
+    width: 35vw; /* Увеличили ширину на больших экранах */
+    padding: 2.5vw;
+  }
+  .popup-close-btn {
+    font-size: clamp(16px, 1.5vw, 22px);
+    height: clamp(35px, 5vh, 50px);
+    width: clamp(180px, 30vw, 300px);
+    margin-top: 1.2rem;
+  }
+}
